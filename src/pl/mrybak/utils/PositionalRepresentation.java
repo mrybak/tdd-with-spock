@@ -15,6 +15,10 @@ public class PositionalRepresentation {
     }
 
     public String getRepresentation(int radix) {
+        // negative radix is not supported
+        if (radix < 0) {
+            throw new IllegalArgumentException();
+        }
         return "";
     }
 }
