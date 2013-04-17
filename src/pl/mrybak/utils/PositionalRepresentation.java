@@ -15,8 +15,8 @@ public class PositionalRepresentation {
     }
 
     public String getRepresentation(int radix) {
-        // negative radix is not supported
-        if (radix < 0) {
+        // negative radix or radix > 36 (we have 10 digits and 26 letters only...) is not supported
+        if (radix < 0 || radix > 36) {
             throw new IllegalArgumentException();
         }
         return "";
